@@ -7,7 +7,7 @@ const NavBar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <div className="navbar my-12">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,8 +27,17 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end space-x-4">
-                <a className="btn font-bold text-white bg-green-600">Sign In</a>               
-                <a className="btn font-bold text-white bg-blue-400">Sign Up</a>               
+                <div className="hidden md:flex md:gap-2">
+                    <a className="btn font-bold text-white bg-green-600">Sign In</a>
+                    <a className="btn font-bold text-white bg-blue-400">Sign Up</a>
+                </div>
+                <div className="dropdown dropdown-bottom dropdown-end">
+                    <div tabIndex={0} role="button" className="btn m-1 md:hidden">User</div>
+                    <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                        <li><a>Sign Up</a></li>
+                        <li><a>Sign In</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     );
