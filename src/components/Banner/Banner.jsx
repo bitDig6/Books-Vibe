@@ -1,4 +1,5 @@
 import bannerImg from '../../assets/images/books.jpg';
+import { scrollToDiv } from '../../utility/scrollToElem';
 
 const Banner = () => {
     return (
@@ -9,7 +10,7 @@ const Banner = () => {
                     className="rounded-lg shadow-2xl" />
                 <div className='space-y-6'>
                     <h1 className="text-5xl font-bold">Books to freshen up your bookshelf</h1>
-                    <button className="btn btn-primary">View The List</button>
+                    <button onClick={scrollToDiv} className="btn btn-primary">View The List</button>
                 </div>
             </div>
         </div>
