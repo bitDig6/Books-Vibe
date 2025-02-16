@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const getStoredWishList = () => {
     const storedWishListStr = localStorage.getItem('wishlist');
     if(storedWishListStr){
@@ -11,6 +13,7 @@ const addToWishList = id => {
     const storedWishList = getStoredWishList();
     if(storedWishList.includes(id)){
         console.log(id, ' already added to wishlist');
+        toast('book already added to wishlist');
     }else{
         storedWishList.push(id);
         const storedWishListStr = JSON.stringify(storedWishList);
